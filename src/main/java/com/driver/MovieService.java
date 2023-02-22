@@ -43,7 +43,7 @@ public class MovieService {
         return movieRepository.getMoviesByDirectorName(name);
     }
 
-    public HashMap<String,Movie> findAllMovies()
+    public ArrayList<String> findAllMovies()
     {
         return movieRepository.findAllMovies();
     }

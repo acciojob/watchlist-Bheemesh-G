@@ -90,9 +90,8 @@ public class MovieRepository {
     }
 
     //for printing all movies
-    public HashMap<String,Movie> findAllMovies()
-    {
-        return m;
+    public ArrayList<String> findAllMovies(){
+        return new ArrayList<>(m.keySet());
     }
 
     public String deleteDirectorByName(String name)
