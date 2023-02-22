@@ -35,6 +35,8 @@ public class MovieRepository {
     {
         if(m.containsKey(mName) && d.containsKey(dName))
         {
+            m.put(mName,m.get(mName));
+            d.put(dName,d.get(dName));
             if(st.containsKey(dName))
             {
                 ArrayList<String> temp = st.get(dName);
