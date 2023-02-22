@@ -121,7 +121,15 @@ public class MovieRepository {
 
     public String deleteAllDirectors()
     {
-        st.clear();
+       for(String i:st.keySet())
+       {
+           ArrayList<String> list = new ArrayList<>();
+           list = st.get(i);
+           for(String j:list)
+           {
+               m.remove(j);
+           }
+       }
 
         return "All Directors Deleted Successfully....";
     }
