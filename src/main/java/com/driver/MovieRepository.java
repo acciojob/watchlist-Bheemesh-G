@@ -85,8 +85,8 @@ public class MovieRepository {
         {
             return new ArrayList<>();
         }
-
-        return st.get(name);
+     ArrayList<String> temp = st.get(name);
+        return temp;
     }
 
     //for printing all movies
