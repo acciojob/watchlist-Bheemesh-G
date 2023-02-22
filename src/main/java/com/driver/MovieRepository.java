@@ -99,7 +99,22 @@ public class MovieRepository {
             return "Director Not Found....";
         }
 
-        st.remove(name);
+        ArrayList<String> list = new ArrayList<>();
+        if(st.containsKey(name))
+        {
+            list = st.get(name);
+            for(String i:list)
+            {
+                m.remove(i);
+            }
+
+            st.remove(name);
+        }
+
+        if(d.containsKey(name))
+        {
+            d.remove(name);
+        }
 
         return "Successfully Deleted The Director....";
     }
