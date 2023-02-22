@@ -37,17 +37,13 @@ public class MovieRepository {
         {
             m.put(mName,m.get(mName));
             d.put(dName,d.get(dName));
+            ArrayList<String> temp = new ArrayList<>();
             if(st.containsKey(dName))
             {
-                ArrayList<String> temp = st.get(dName);
-                temp.add(mName);
-                st.put(dName,temp);
+                temp = st.get(dName);
             }
-            else {
-                ArrayList<String> temp = new ArrayList<>();
-                temp.add(mName);
+            temp.add(mName);
                 st.put(dName,temp);
-            }
 
             return "MovieAndDirector Pair Added Successfully.....";
         }
